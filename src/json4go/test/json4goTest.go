@@ -1,5 +1,11 @@
 package main
 
+/*
+author:DaiJingPei
+email:dijp@qq.com
+url:https://github.com/dijp/json4go
+*/
+
 import (
 	"fmt"
 	"json4go"

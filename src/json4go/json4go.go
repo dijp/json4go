@@ -1,5 +1,11 @@
 package json4go
 
+/*
+author:DaiJingPei
+email:dijp@qq.com
+url:https://github.com/dijp/json4go
+*/
+
 import (
 	"strconv"
 	"fmt"
