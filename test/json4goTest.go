@@ -31,8 +31,9 @@ func test1() {
 }
 
 func test2() {
-	str := `{"servers":[{"serverName":"Shanghai_VPN","serverIP":"127.0.0.1"},{"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}]}`
+	str := `{"function":"200","servers":[{"serverName":"Shanghai_VPN","serverIP":"127.0.0.1"},{"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}]}`
 	j := json4go.Parse2Json(str)
+	fmt.Println(j.GetString("function"))
 	fmt.Println(j.GetJsonArray("servers").GetJson(0).GetString("serverName"))
 	fmt.Println(j.GetJsonArray("servers").GetJson(1).ToString())
 }
