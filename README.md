@@ -14,9 +14,9 @@ import (
   )
 
 func main() {
-	str := `{"function":"200","servers":[{"serverName":"Shanghai_VPN","serverIP":"127.0.0.1"},{"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}]}`
+	str := `{"function":200,"servers":[{"serverName":"Shanghai_VPN","serverIP":"127.0.0.1"},{"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}]}`
 	j := json4go.Parse2Json(str)
-	fmt.Println(j.GetString("function"))//200
+	fmt.Println(j.GetInt("function"))//200
 	fmt.Println(j.GetJsonArray("servers").GetJson(0).GetString("serverName"))//Shanghai_VPN
 	fmt.Println(j.GetJsonArray("servers").GetJson(1).ToString())//{"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}
 }
