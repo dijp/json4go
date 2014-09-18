@@ -1,10 +1,8 @@
-package main
+// Copyright 2014 The "json4go" Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
 
-/*
-author:DaiJingPei
-email:dijp@qq.com
-url:https://github.com/dijp/json4go
-*/
+package main
 
 import (
 	"fmt"
@@ -38,6 +36,9 @@ func test2() {
 	fmt.Println(j.GetJsonArray("servers").GetJson(1).ToString())
 }
 
+//developer:DaiJingPei
+//email:dijp@qq.com
+//url:https://github.com/dijp/json4go
 func main() {
 	test1()
 	test2()

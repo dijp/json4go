@@ -1,10 +1,8 @@
-package json4go
+// Copyright 2014 The "json4go" Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
 
-/*
-author:DaiJingPei
-email:dijp@qq.com
-url:https://github.com/dijp/json4go
-*/
+package json4go
 
 import (
 	"strconv"
@@ -259,6 +257,9 @@ func NewJsonArray() *JsonArray {
 	return j
 }
 
+//developer:DaiJingPei
+//email:dijp@qq.com
+//url:https://github.com/dijp/json4go
 func Parse2Json(str string) *Json {
 	defer func() {
 		if err := recover(); err != nil {
