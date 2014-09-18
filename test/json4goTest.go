@@ -8,7 +8,7 @@ url:https://github.com/dijp/json4go
 
 import (
 	"fmt"
-	"dijp/json4go"
+	"github.com/dijp/json4go"
 )
 
 type Person struct {
