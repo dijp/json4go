@@ -5,8 +5,6 @@ json parser go golang json4go
 
 ## Getting Started
 
-After installing Go and setting up your [GOPATH](http://golang.org/doc/code.html#GOPATH), create your first `.go` file. 
-
 ~~~ go
 package main
 
@@ -24,7 +22,8 @@ func main() {
 }
 ~~~
 
-Then install the json4go package (**go 1.1** and greater is required):
+## Installation
+
 ~~~
 go get github.com/dijp/json4go
 ~~~
