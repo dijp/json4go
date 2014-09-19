@@ -1,7 +1,7 @@
 json4go
 =======
 
-json parser go golang json4go
+A JSON parser for Go. keywords json,parser,go,golang,json4go.
 
 ## Getting Started
 
@@ -27,3 +27,7 @@ func main() {
 ~~~
 go get github.com/dijp/json4go
 ~~~
+
+### Documentation
+
+Visit the docs on [gopkgdoc](http://godoc.org/github.com/dijp/json4go)
