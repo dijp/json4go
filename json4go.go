@@ -5,11 +5,10 @@
 package json4go
 
 import (
-	"strconv"
-	"fmt"
 	"encoding/json"
+	"fmt"
+	"strconv"
 )
-
 
 type Json struct {
 	m map[string]interface{}
@@ -20,7 +19,7 @@ func (this *Json) GetJson(key string) *Json {
 	return p
 }
 
-func (this *Json) GetMap()map[string]interface{}{
+func (this *Json) GetMap() map[string]interface{} {
 	return this.m
 }
 
@@ -114,6 +113,7 @@ func (this *Json) ToString() string {
 			sb = append(sb, strconv.FormatBool(v.(bool))...)
 		}
 	}
+
 	sb = append(sb, '}')
 	return string(sb)
 }
@@ -145,7 +145,7 @@ func (this *JsonArray) GetJson(index int) *Json {
 	return p
 }
 
-func (this *JsonArray) GetArray()[]interface{}{
+func (this *JsonArray) GetArray() []interface{} {
 	return this.arr
 }
 
@@ -294,12 +294,12 @@ func Parse2JsonArray(str string) *JsonArray {
 	return nil
 }
 
-func ToJson(o interface{})*Json{
+func ToJson(o interface{}) *Json {
 	body, err := json.Marshal(o)
 	if err != nil {
-		    panic(err.Error())
-		}
-	return Parse2Json(string(body));
+		panic(err.Error())
+	}
+	return Parse2Json(string(body))
 }
 
 func createJson(scan *Scanner) *Json {
@@ -311,6 +311,8 @@ for1:
 		s := scan.nextToken()
 		if s[0] == '"' {
 			key = s[1 : len(s)-1]
+		} else if s[0] == '}' {
+			return j
 		} else {
 			key = s
 		}
@@ -389,6 +391,8 @@ for1:
 		case 'n':
 			if s == "null" {
 			}
+		case ']':
+			return a
 		default:
 			value, _ = strconv.ParseFloat(s, 64)
 			a.Add(value)
