@@ -257,8 +257,6 @@ func NewJsonArray() *JsonArray {
 	return j
 }
 
-//developer:DaiJingPei
-//email:dijp@qq.com
 //url:https://github.com/dijp/json4go
 func Parse2Json(str string) *Json {
 	defer func() {
